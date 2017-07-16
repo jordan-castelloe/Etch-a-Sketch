@@ -2,4 +2,4 @@
 
 I built this Etch-A-Sketch as part of the [Odin Project's Curriculum](https://www.theodinproject.com/courses)!
 
-You can check out the finished project [here]().
+You can check out the finished project [here](https://jordan-castelloe.github.io/Etch-a-Sketch/).
