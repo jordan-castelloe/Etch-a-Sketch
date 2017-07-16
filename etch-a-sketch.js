@@ -1,18 +1,19 @@
 $(document).ready(function() {
 
-createGrid(16);
+createGrid(20);
 
 });
 
 function createGrid(size){
 
-if(size > 100 || size == null){
-	var size = 16;
- }
-
+var size = prompt("Enter a number between 1 and 100", "20");
 var h= 300/size;
 var w= 550/size;
 var box = $('.box');
+
+$('.box').css("height", h);
+$('.box').css("width", w);
+
 
 for (var i = 0; i < size*size; i++) {
    box.clone().insertAfter(box);
@@ -23,7 +24,7 @@ $('.box').mouseenter(function(){
     $(this).css("background-color", "#848484");
 });
 
-// bold buttons when mouseover
+// bold buttons when mouse hovers over them
 $('#clear-grid, #new-grid').mouseenter(function(){
 	$(this).css("font-weight", "bold");
 });
@@ -41,11 +42,12 @@ $('#clear-grid').click(function(){
 
 //trigger pop-up box when 'new grid' button is clicked
 $('#new-grid').click(function(){
-    var size = prompt("Enter a number between 1 and 100", "16");
-    $('.box').css("height", size);
-    $('.box').css("width", size);
-
+    location.reload();
  });
+
+if(size > 100 || size == null){
+	var size = 16;
+ }
 
 
 }
